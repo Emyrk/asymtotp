@@ -12,65 +12,67 @@
 }
 </style>
 <body>
-	<div class="row">
-		<div class="col-md-4 left col-sm-6">
-			<div>
-			  <h2>Private seed for OTP</h2>
-			  <p>This is kept by user, and not shown to anyone</p>
-			  <pre style="white-space: pre-wrap;text-align: center;" id="mnemonic" class="col-md-8"></pre>
-			</div>
-			<br /><br /><br /><br />
-			<div class="form-group col-md-8">
-			  <label for="sel1">Select Site for OTP:</label>
-			  <select class="form-control" id="sel1" onchange="selectSite(this);">
-			    <option value="1">HODL.ZONE</option>
-			    <option value="2">Google.com</option>
-			    <option value="3">Facebook.com</option>
-			    <option value="4">Stevenmasley.me</option>
-			  </select>
-			</div>
-			<br /><br /><br /><br />
-			<div>
-				<h3>OTP</h3>
+	<div class="container">
+		<div class="row">
+			<div class="left col-sm-6">
 				<div>
-					<p id="timer" style="height: 120px;"></p>
-					<p>OTP Code:  <pre style="white-space: pre-wrap;"" id="code"></pre></p>
+				  <h2>Private seed for OTP</h2>
+				  <p>This is kept by user, and not shown to anyone</p>
+				  <pre style="white-space: pre-wrap;text-align: center;" id="mnemonic" class="col-md-8"></pre>
 				</div>
-
-			</div>
-		</div> <!-- END LEFT -->
-		<div class="col-md-4 col-sm-6 right">
-			<h2>Public seed for OTP</h2>
-			<div>
-			  <p>This can be shown to anyone, it's a public key</p>
-			  <pre style="white-space: pre-wrap;text-align: center;" id="public-key" class="col-md-8"></pre>
-			</div>
-			<div class="form-group col-md-8">
-			  <label for="sel1">Select Site for Verify OTP:</label>
-			  <select class="form-control" id="sel2" onchange="selectSite2(this);">
-			    <option value="1">HODL.ZONE</option>
-			    <option value="2">Google.com</option>
-			    <option value="3">Facebook.com</option>
-			    <option value="4">Stevenmasley.me</option>
-			  </select>
-			</div>
-			<br /><br /><br /><br />
-			<div>
 				<br /><br /><br /><br />
-				<h3>OTP Input</h3>
+				<div class="form-group col-md-8">
+				  <label for="sel1">Select Site for OTP:</label>
+				  <select class="form-control" id="sel1" onchange="selectSite(this);">
+				    <option value="1">HODL.ZONE</option>
+				    <option value="2">Google.com</option>
+				    <option value="3">Facebook.com</option>
+				    <option value="4">Stevenmasley.me</option>
+				  </select>
+				</div>
+				<br /><br /><br /><br />
 				<div>
-					<p>OTP Code:  <pre style="white-space: pre-wrap;"" id="code-pub"></pre></p>
+					<h3>OTP</h3>
+					<div>
+						<p id="timer" style="height: 120px;"></p>
+						<p>OTP Code:  <pre style="white-space: pre-wrap;"" id="code"></pre></p>
+					</div>
+
 				</div>
-				<button onclick="validate()">
-					Authenticate
-				</button>
-			</div>
-			<div>
-				<div id="valid" class="alert alert-success" style="display: none;">
-				  <strong>Success!</strong> OTP has authenticated
+			</div> <!-- END LEFT -->
+			<div class="col-sm-6 right">
+				<h2>Public seed for OTP</h2>
+				<div>
+				  <p>This can be shown to anyone, it's a public key</p>
+				  <pre style="white-space: pre-wrap;text-align: center;" id="public-key" class="col-md-8"></pre>
 				</div>
-				<div id="not-valid"  class="alert alert-danger" style="display: none;">
-				  <strong>Error!</strong> OTP has failed to authenticate
+				<div class="form-group col-md-8">
+				  <label for="sel1">Select Site for Verify OTP:</label>
+				  <select class="form-control" id="sel2" onchange="selectSite2(this);">
+				    <option value="1">HODL.ZONE</option>
+				    <option value="2">Google.com</option>
+				    <option value="3">Facebook.com</option>
+				    <option value="4">Stevenmasley.me</option>
+				  </select>
+				</div>
+				<br /><br /><br /><br />
+				<div>
+					<br /><br /><br /><br />
+					<h3>OTP Input</h3>
+					<div>
+						<p>OTP Code:  <pre style="white-space: pre-wrap;"" id="code-pub"></pre></p>
+					</div>
+					<button onclick="validate()">
+						Authenticate
+					</button>
+				</div>
+				<div>
+					<div id="valid" class="alert alert-success" style="display: none;">
+					  <strong>Success!</strong> OTP has authenticated
+					</div>
+					<div id="not-valid"  class="alert alert-danger" style="display: none;">
+					  <strong>Error!</strong> OTP has failed to authenticate
+					</div>
 				</div>
 			</div>
 		</div>
@@ -126,15 +128,19 @@ function validate() {
 	}
 }
 
-$('#timer').pietimer({
-    seconds: 60,
-    color: 'rgba(0, 102, 255, 0.8)',
-    height: 100,
-    width: 100
-},function(){
-    updateOTP()
-});
-$('#timer').pietimer('start');
+function startTimer() {
+	$('#timer').pietimer({
+	    seconds: 60,
+	    color: 'rgba(0, 102, 255, 0.8)',
+	    height: 100,
+	    width: 100
+	},function(){
+	    updateOTP()
+	    startTimer()
+	});
+	$('#timer').pietimer('start');
+}
+startTimer()
 
 updateOTP()
 </script>
