@@ -33,20 +33,60 @@ function validMnemonic (mnemonic) {
   return bip39.validateMnemonic(mnemonic)
 }
 
+/**
+ * This is the AsymTOTP secret, do not share with anyone
+ * @param {String} mnemonic 12 word mnemonic
+ */
 function AsymTOTPSecret (mnemonic) {
   var seed = bip39.mnemonicToSeedHex(mnemonic)
   this.hdWallet = bitcoin.HDNode.fromSeedHex(seed)
 }
 
+/**
+ * 
+ * @param  {[type]} site [description]
+ * @return {[type]}      [description]
+ */
 AsymTOTPSecret.prototype.getOTP = function(site) {
   var t = getOTPTime()
   var signKey = this.hdWallet.derive(site).derive(t)
   return signKey.sign(sha256(t))
 }
 
-function AsymTOTPPublic(secret) {
-  this.masterNode = secret.hdWallet.neutered()
+/**
+ * This is the AsymTOTP public, share with everyone
+ * @param {secret} secret Need the secret to generate the public
+ */
+function AsymTOTPPublic(node) {
+  this.masterNode = node
 }
+
+/**
+ * Public node from base58 string
+ * @param  {String} str String version of pub node
+ * @return {AsymTOTPPublic}     
+ */
+AsymTOTPPublic.fromBase58 = function(str) {
+    return new AsymTOTPPublic(bitcoin.HDNode.fromBase58(str))
+}
+
+/**
+ * Public node from secret master node
+ * @param  {bitcoin.hdWallet} secret 
+ * @return {AsymTOTPPublic}        
+ */
+AsymTOTPPublic.fromSecret= function(secret) {
+    return new AsymTOTPPublic(secret.hdWallet.neutered())
+}
+
+/**
+ * Public node to base58 string
+ * @return {String} base58 version of node to be sent
+ */
+AsymTOTPPublic.prototype.toBase58 = function() {
+  return this.masterNode.toBase58()
+}
+
 
 AsymTOTPPublic.prototype.verifyOTP = function(site, sig) {
   var siteNode = this.masterNode.derive(site)
