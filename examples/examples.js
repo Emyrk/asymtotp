@@ -6,6 +6,8 @@ var pu = new asymtotp.AsymTOTPPublic.fromSecret(s)
 
 var si = s.getOTP(1)
 
+console.log(asymtotp.randomMnemonic())
+
 var otp = asymtotp.signatueToHex(si)
 var otpSig = asymtotp.hexToSignature(otp)
 console.log(pu.verifyOTP(1, otpSig))

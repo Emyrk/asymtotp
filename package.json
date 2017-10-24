@@ -9,7 +9,7 @@
     "prepublish": "npm run test && npm run build:docs && npm run build:dist",
     "coveralls": "npm run coverage && coveralls <coverage/lcov.info",
     "build:docs": "documentation --github  -f md ./index.js > ./docs/index.md",
-    "build:dist": "browserify -r ./index.js:factomjs-util -s Util -t [ babelify --presets [ es2015 react ] ] > dist/asymtotp.js"
+    "build:dist": "browserify -r ./index.js:asymtotp -s asymtotp -t [ babelify --presets [ es2015 react ] ] > dist/asymtotp.js"
   },
   "repository": {
     "type": "git",
