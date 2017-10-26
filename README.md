@@ -93,5 +93,6 @@ if (public.verifyOTP(site_id, asymtotp.hexToSignature(exportedOTP)) {
 	// Successful verify
 } else {
 	// OTP is invalid
+}
 ```
 

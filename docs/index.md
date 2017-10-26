@@ -1,6 +1,6 @@
 # AsymTOTPPublic
 
-[index.js:60-62](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L60-L62 "Source code on GitHub")
+[index.js:59-61](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L59-L61 "Source code on GitHub")
 
 This is the AsymTOTP public, share with everyone
 
@@ -11,7 +11,7 @@ This is the AsymTOTP public, share with everyone
 
 ## toBase58
 
-[index.js:86-88](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L86-L88 "Source code on GitHub")
+[index.js:85-87](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L85-L87 "Source code on GitHub")
 
 Public node to base58 string
 
@@ -19,7 +19,7 @@ Returns **String** base58 version of node to be sent
 
 ## fromBase58
 
-[index.js:69-71](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L69-L71 "Source code on GitHub")
+[index.js:68-70](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L68-L70 "Source code on GitHub")
 
 Public node from base58 string
 
@@ -31,7 +31,7 @@ Returns **AsymTOTPPublic**
 
 ## fromSecret
 
-[index.js:78-80](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L78-L80 "Source code on GitHub")
+[index.js:77-79](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L77-L79 "Source code on GitHub")
 
 Public node from secret master node
 
@@ -43,7 +43,7 @@ Returns **AsymTOTPPublic**
 
 # AsymTOTPSecret
 
-[index.js:40-43](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L40-L43 "Source code on GitHub")
+[index.js:39-42](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L39-L42 "Source code on GitHub")
 
 This is the AsymTOTP secret, do not share with anyone
 
@@ -53,7 +53,7 @@ This is the AsymTOTP secret, do not share with anyone
 
 ## getOTP
 
-[index.js:50-54](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L50-L54 "Source code on GitHub")
+[index.js:49-53](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L49-L53 "Source code on GitHub")
 
 **Parameters**
 
@@ -63,7 +63,7 @@ Returns **** [description]
 
 # bufferToHex
 
-[index.js:116-118](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L116-L118 "Source code on GitHub")
+[index.js:115-117](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L115-L117 "Source code on GitHub")
 
 Converts a `Buffer` into a hex `String`
 
@@ -75,7 +75,7 @@ Returns **String**
 
 # intToBuffer
 
-[index.js:145-149](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L145-L149 "Source code on GitHub")
+[index.js:144-148](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L144-L148 "Source code on GitHub")
 
 Converts an `Number` to a `Buffer`
 
@@ -87,7 +87,7 @@ Returns **Buffer**
 
 # intToHex
 
-[index.js:156-160](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L156-L160 "Source code on GitHub")
+[index.js:155-159](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L155-L159 "Source code on GitHub")
 
 Converts a `Number` into a hex `String`
 
@@ -99,7 +99,7 @@ Returns **String**
 
 # isHexString
 
-[index.js:170-178](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L170-L178 "Source code on GitHub")
+[index.js:169-177](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L169-L177 "Source code on GitHub")
 
 Is the string a hex string.
 
@@ -112,7 +112,7 @@ Returns **Boolean** output the string is a hex string
 
 # padToEven
 
-[index.js:186-198](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L186-L198 "Source code on GitHub")
+[index.js:185-197](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L185-L197 "Source code on GitHub")
 
 Pads a `String` to have an even length
 
@@ -124,7 +124,7 @@ Returns **String** output
 
 # randomMnemonic
 
-[index.js:28-30](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L28-L30 "Source code on GitHub")
+[index.js:27-29](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L27-L29 "Source code on GitHub")
 
 Generates a random 12 word mnemonic seed
 
@@ -132,7 +132,7 @@ Returns **String** 12 word mnemonic
 
 # sha256
 
-[index.js:134-137](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L134-L137 "Source code on GitHub")
+[index.js:133-136](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L133-L136 "Source code on GitHub")
 
 Creates SHA256 hash of the input
 
@@ -144,7 +144,7 @@ Returns **Buffer**
 
 # toBuffer
 
-[index.js:204-226](https://github.com/Emyrk/asymtotp/blob/abef959dcf16a20c864eceb47f852e55c666aa64/index.js#L204-L226 "Source code on GitHub")
+[index.js:203-225](https://github.com/Emyrk/asymtotp/blob/a9031deb760c63352805b9b4b29c2279b6fa3172/index.js#L203-L225 "Source code on GitHub")
 
 Attempts to turn a value into a `Buffer`. As input it supports `Buffer`, `String`, `Number`, null/undefined, `BN` and other objects with a `toArray()` method.
 
