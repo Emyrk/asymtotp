@@ -17,3 +17,81 @@ If an app was made similar to google authenicator, it would work like such:
 ![UML Sequence Diagram Img](https://imgur.com/vhnbTuW)
 
 ## Disclaimer
+
+This is not intended for production use. A quickly put together proof of concept
+
+## Using
+
+A random mnemonic can be obained from `randomMnemonic()`
+
+### nodejs
+
+As normal
+
+```javascript
+var asymtotp = require('asymtotp')
+```
+
+### web
+
+Include dist/asymtotp.js
+```html
+<script src="dist/asymtotp.js"></script>
+<script type="text/javascript">
+	var mnemonic = asymtotp.randomMnemonic()
+    // ...
+</script>
+
+```
+
+### Generating the public/private root
+```javascript
+// User generates and keeps the menemonic secret
+var mnemonic = 'yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow'
+
+// Never reveal this, keep it secure by user
+var secret = new asymtotp.AsymTOTPSecret(mnemonic)
+// This can be revealed to the world. We will talk how to export
+var public = new asymtotp.AsymTOTPPublic.fromSecret(secret)
+
+// Export Public
+var exportedPub = public.toBase58()
+
+// Importing Public
+public =  = new asymtotp.AsymTOTPPublic.fromBase58(exportedPublic)
+```
+
+
+### Getting the OTP and verifying
+
+Client side (secret stuff) -- Generating OTP
+```javascript
+var mnemonic = asymtotp.randomMnemonic()
+var secret = new asymtotp.AsymTOTPSecret(mnemonic)
+
+// Each site has an ID, we will assign the site_id to 10. Both the site
+// and user need to use the same ID
+var site_id = 10
+	
+
+// Get OTP
+var sig = s.getOTP(site_id)
+
+// Export the signature
+var exportedOTP = asymtotp.signatueToHex(sig)
+```
+
+Server Side -- Verify OTP
+```javascript
+// Need the public root
+var public = new asymtotp.AsymTOTPPublic.fromBase58(exportedPublic)
+
+// Need the same site_id
+var site_id = 10
+
+if (public.verifyOTP(site_id, asymtotp.hexToSignature(exportedOTP)) {
+	// Successful verify
+} else {
+	// OTP is invalid
+```
+

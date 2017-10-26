@@ -4294,43 +4294,21 @@ require('./convert')
 module.exports = BigInteger
 },{"./bigi":20,"./convert":21}],23:[function(require,module,exports){
 module.exports={
-  "_args": [
-    [
-      {
-        "raw": "bigi@^1.4.0",
-        "scope": null,
-        "escapedName": "bigi",
-        "name": "bigi",
-        "rawSpec": "^1.4.0",
-        "spec": ">=1.4.0 <2.0.0",
-        "type": "range"
-      },
-      "/home/factom/go/src/github.com/Emyrk/asym-totp/node_modules/bitcoinjs-lib"
-    ]
-  ],
-  "_from": "bigi@>=1.4.0 <2.0.0",
+  "_from": "bigi@^1.4.0",
   "_id": "bigi@1.4.2",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-nGZalfiLiwj8Bc/XMfVhhZ1yWCU=",
   "_location": "/bigi",
-  "_nodeVersion": "6.1.0",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/bigi-1.4.2.tgz_1469584192413_0.6801238611806184"
-  },
-  "_npmUser": {
-    "name": "jprichardson",
-    "email": "jprichardson@gmail.com"
-  },
-  "_npmVersion": "3.8.6",
   "_phantomChildren": {},
   "_requested": {
+    "type": "range",
+    "registry": true,
     "raw": "bigi@^1.4.0",
-    "scope": null,
-    "escapedName": "bigi",
     "name": "bigi",
+    "escapedName": "bigi",
     "rawSpec": "^1.4.0",
-    "spec": ">=1.4.0 <2.0.0",
-    "type": "range"
+    "saveSpec": null,
+    "fetchSpec": "^1.4.0"
   },
   "_requiredBy": [
     "/bitcoinjs-lib",
@@ -4338,13 +4316,14 @@ module.exports={
   ],
   "_resolved": "https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz",
   "_shasum": "9c665a95f88b8b08fc05cfd731f561859d725825",
-  "_shrinkwrap": null,
   "_spec": "bigi@^1.4.0",
-  "_where": "/home/factom/go/src/github.com/Emyrk/asym-totp/node_modules/bitcoinjs-lib",
+  "_where": "/Users/stevenmasley/go/src/github.com/Emyrk/asymtotp/node_modules/bitcoinjs-lib",
   "bugs": {
     "url": "https://github.com/cryptocoinjs/bigi/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {},
+  "deprecated": false,
   "description": "Big integers.",
   "devDependencies": {
     "coveralls": "^2.11.2",
@@ -4353,12 +4332,6 @@ module.exports={
     "mocha": "^2.1.0",
     "mochify": "^2.1.0"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "9c665a95f88b8b08fc05cfd731f561859d725825",
-    "tarball": "https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz"
-  },
-  "gitHead": "c25308081c896ff84702303722bf5ecd8b3f78e3",
   "homepage": "https://github.com/cryptocoinjs/bigi#readme",
   "keywords": [
     "cryptography",
@@ -4378,27 +4351,7 @@ module.exports={
     "float"
   ],
   "main": "./lib/index.js",
-  "maintainers": [
-    {
-      "name": "midnightlightning",
-      "email": "boydb@midnightdesign.ws"
-    },
-    {
-      "name": "sidazhang",
-      "email": "sidazhang89@gmail.com"
-    },
-    {
-      "name": "nadav",
-      "email": "npm@shesek.info"
-    },
-    {
-      "name": "jprichardson",
-      "email": "jprichardson@gmail.com"
-    }
-  ],
   "name": "bigi",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "url": "git+https://github.com/cryptocoinjs/bigi.git",
     "type": "git"
@@ -36192,43 +36145,21 @@ utils.intFromLE = intFromLE;
 
 },{"bn.js":76,"minimalistic-assert":177,"minimalistic-crypto-utils":178}],150:[function(require,module,exports){
 module.exports={
-  "_args": [
-    [
-      {
-        "raw": "elliptic@^6.0.0",
-        "scope": null,
-        "escapedName": "elliptic",
-        "name": "elliptic",
-        "rawSpec": "^6.0.0",
-        "spec": ">=6.0.0 <7.0.0",
-        "type": "range"
-      },
-      "/home/factom/go/src/github.com/Emyrk/asym-totp/node_modules/browserify-sign"
-    ]
-  ],
-  "_from": "elliptic@>=6.0.0 <7.0.0",
+  "_from": "elliptic@^6.0.0",
   "_id": "elliptic@6.4.0",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-ysmvh2LIWDYYcAPI3+GT5eLq5d8=",
   "_location": "/elliptic",
-  "_nodeVersion": "7.0.0",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/elliptic-6.4.0.tgz_1487798866428_0.30510620190761983"
-  },
-  "_npmUser": {
-    "name": "indutny",
-    "email": "fedor@indutny.com"
-  },
-  "_npmVersion": "3.10.8",
   "_phantomChildren": {},
   "_requested": {
+    "type": "range",
+    "registry": true,
     "raw": "elliptic@^6.0.0",
-    "scope": null,
-    "escapedName": "elliptic",
     "name": "elliptic",
+    "escapedName": "elliptic",
     "rawSpec": "^6.0.0",
-    "spec": ">=6.0.0 <7.0.0",
-    "type": "range"
+    "saveSpec": null,
+    "fetchSpec": "^6.0.0"
   },
   "_requiredBy": [
     "/browserify-sign",
@@ -36236,9 +36167,8 @@ module.exports={
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
-  "_shrinkwrap": null,
   "_spec": "elliptic@^6.0.0",
-  "_where": "/home/factom/go/src/github.com/Emyrk/asym-totp/node_modules/browserify-sign",
+  "_where": "/Users/stevenmasley/go/src/github.com/Emyrk/asymtotp/node_modules/browserify-sign",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -36246,6 +36176,7 @@ module.exports={
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "bn.js": "^4.4.0",
     "brorand": "^1.0.1",
@@ -36255,6 +36186,7 @@ module.exports={
     "minimalistic-assert": "^1.0.0",
     "minimalistic-crypto-utils": "^1.0.0"
   },
+  "deprecated": false,
   "description": "EC cryptography",
   "devDependencies": {
     "brfs": "^1.4.3",
@@ -36272,15 +36204,9 @@ module.exports={
     "jshint": "^2.6.0",
     "mocha": "^2.1.0"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
-    "tarball": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz"
-  },
   "files": [
     "lib"
   ],
-  "gitHead": "6b0d2b76caae91471649c8e21f0b1d3ba0f96090",
   "homepage": "https://github.com/indutny/elliptic",
   "keywords": [
     "EC",
@@ -36290,15 +36216,7 @@ module.exports={
   ],
   "license": "MIT",
   "main": "lib/elliptic.js",
-  "maintainers": [
-    {
-      "name": "indutny",
-      "email": "fedor@indutny.com"
-    }
-  ],
   "name": "elliptic",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/indutny/elliptic.git"
@@ -39080,7 +38998,7 @@ if (typeof Object.create === 'function') {
 /*!
  * Determine if an object is a Buffer
  *
- * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @author   Feross Aboukhadijeh <https://feross.org>
  * @license  MIT
  */
 
