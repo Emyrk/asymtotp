@@ -2,7 +2,6 @@ var bip39 = require('bip39')
 var bitcoin = require('bitcoinjs-lib')
 var bip32utils = require('bip32-utils')
 const Buffer = require('safe-buffer').Buffer
-const fctUtils = require('factomjs-util')
 const createHash = require('create-hash')
 const stripHexPrefix = require('strip-hex-prefix')
 
